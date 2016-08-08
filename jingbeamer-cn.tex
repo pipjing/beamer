@@ -1,0 +1,271 @@
+%!Tex program=xelatex
+\documentclass[presentation]{beamer}
+
+\usepackage{xeCJK}
+\usepackage{graphics}
+
+
+
+
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{beamerthemesplit}
+
+
+\usepackage{hyperref}       %为PDF文档创建超链接
+
+\usefonttheme[onlymath]{serif}
+\usepackage{amsmath}                   %数学符号与公式
+\usepackage{amsfonts}                  %数学符号与字体
+
+
+% 设置一些格式
+%==================================================
+\beamertemplateballitem
+%\setbeamertemplate{theorems}[numbered]      %定理编号
+%\setbeamertemplate{caption}[numbered]       %图和表格的标题显示编号
+%\setbeamertemplate{navigation symbols}{}    %取消导航条
+%==================================================
+
+
+
+
+% 将默认的英文目录等改为中文，设置图号和公式号与章节对应，缩进大小
+%==================================================
+% \renewcommand{\contentsname}{\LARGE{\bf{目 \quad 录}}}
+% \renewcommand{\abstractname}{\Large{\bf{摘 \quad 要}}}
+% \renewcommand{\appendixname}{\Large{\bf{附 \quad 录}}}
+% \renewcommand{\theequation}{\arabic{section}.\arabic{equation}}      %公式号与章节对应
+% \renewcommand{\figurename}{\normalsize{图 \arabic{section}.\arabic{figure}}}   %改figure为图
+% \makeatletter
+% \renewcommand{\fnum@figure}[1]{\textbf{\figurename~}\hspace{10pt} \sffamily}   %图号与章节对应
+% \makeatother
+\setlength{\parindent}{2em}       %设置缩进为两个大写M的宽度，大约为两个汉字的宽度
+%==================================================
+
+
+% 设置英文字体
+%==================================================
+
+
+%\usefonttheme{professionalfonts}
+
+
+%\defaultfontfeatures{Scale=MatchLowercase} % 这个参数保证 serif、sans-serif 和 monospace 字体在小写时大小匹配
+\setmainfont[Mapping=tex-text]{Times New Roman} % 使用 XeTeX 的 text-mapping 方案，正确显示 LaTeX 样式的双引号（`` ''）
+% \setmainfont[Mapping=tex-text]{Palatino Linotype}
+%\setsansfont[Mapping=tex-text]{Arial}
+%\setsansfont{微软雅黑}
+ %\setsansfont[Mapping=tex-text]{DejaVu Sans YuanTi}
+%\setmonofont{Courier New}
+ %\setmonofont{Monaco}
+% \setmonofont{DejaVu Sans YuanTi}
+%==================================================
+
+
+%\mode<presentation>
+%{
+%  \usetheme{Warsaw}
+%  % 可以改成别的主题
+%  \setbeamercovered{transparent}
+%  % 也可删去
+%}
+\setbeamertemplate{caption}[numbered]   %beamer默认的图片的caption不带编号
+
+
+%使用metapost动画
+%\usepackage{xmpmulti}
+%\DeclareGraphicsRule{*}{mps}{*}{}
+
+
+%\setmainfont{AdobeKaitiStd}
+%\setsansfont{SimHei}
+
+%\setsansfontWenQuanYi Zen Hei}     %Linux下一般没有SimHei，使用文泉驿正黑或其他系统中可用的字体代替
+
+
+%\usetheme{Warsaw}
+%\usetheme{AnnArbor}
+%\usetheme{PaloAlto}
+%\usetheme{Antibes}
+\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Marburg}
+%\usetheme{PaloAlto}
+%\usetheme{Singapore}
+%\usetheme{Warsaw}
+
+
+\title{beamer测试}
+\subtitle{Beamer中英文混排测试}
+\author{班贵军}
+\institute{北京邮电大学理学院}
+\date{\today}
+
+
+% 如果你想要在每一小节之前都显示一下目录, 则可把一下小段的注解号 "%" 删去
+%\AtBeginS section[]
+%{
+%  
+%\begin{frame}<beamer> 
+%    \frametitle{概要} 
+%    \tableofcontents[currentsection,currents section] 
+%  \end{frame}
+
+%}
+
+
+% 除掉以下命令的注解 "%" 后, 许多环境都会自动逐段显示
+%\beamerdefaultoverlayspecification{<+->}
+
+
+%索引使用中文
+%\renewcommand\contentsname{目\ 录}
+%\renewcommand\listfigurename{插图目录}
+%\renewcommand\listtablename{表格目录}
+%%\renewcommand\abstractname{摘\ 要} %err undefined
+%%\renewcommand\refname{参考文献}         %article类型
+%\renewcommand\bibname{参\ 考\ 文\ 献}    %book类型
+%\renewcommand\indexname{索\ 引}
+%\renewcommand\figurename{图}
+%\renewcommand\tablename{表}
+%\renewcommand\partname{部分}
+
+
+
+
+%定制定理环境
+%\newtheorem{mythl}{引理}[section]
+%\newtheorem{mytht}{定理}[section]
+%\newtheorem{mythr}{注}[section]
+%\newtheorem{mythc}{推论}[section]
+%\newtheorem{mythd}{定义}[section]
+%\newtheorem{mytha}{公理}
+%\newtheorem{mythp}{命题}
+%\newtheorem{mythe}{练习}
+%\newtheorem{myli}{例}[section]
+
+
+
+
+\begin{document} 
+ 
+ 
+\XeTeXlinebreaklocale "zh"  % 表示用中文的断行 
+\XeTeXlinebreakskip = 0pt plus 1pt % 多一点调整的空间 
+ 
+ 
+\begin{frame} 
+\titlepage 
+ 
+ 
+\end{frame} 
+ 
+ 
+\begin{frame} 
+\frametitle{目录} 
+    \tableofcontents     % 你也可以插入选项 [pausesections] 
+ 
+ 
+\end{frame} 
+ 
+ 
+ 
+ 
+\section{先测试一下看看} 
+\subsection{简单格式测试} 
+ 
+ 
+\begin{frame} 
+   \frametitle{测试第一页} 
+ 
+ 
+ 
+ 
+   中文显示正确！\\ 
+English test succeed!\\ 
+\begin{align}\label{eq:ei} 
+    E=mc^2\\ 
+    E=\hbar \nu 
+\end{align} 
+ 
+ 
+\end{frame} 
+ 
+ 
+ 
+ 
+\begin{frame}[allowframebreaks] 
+\frametitle{大段中英文混排测试} 
+中国共产党第十八次全国代表大会开幕式定于2012年11月8日9:00在人民大会堂大礼堂举行。 
+现将有关事项通知如下： 
+ 
+ 
+一、 请各位记者凭大会采访证于上午7:30至8:40从人民大会堂 
+东门经安全检查入场。 
+ 
+ 
+二、 摄影摄像记者从大礼堂二楼5号门进入会场，在二层3、5、7区记者席 
+就座；文字记者从大礼堂三楼5号门进入会场，在三层大礼堂3、5、7区记者席就座。 
+ 
+ 
+三、 各位记者所乘车辆凭大会车证在天安门广场指定位置停放。届时，新闻中心将 
+为参加开幕式的境外媒体提供从瑞吉酒店（原国际俱乐部酒店）出发前往人民 
+大会堂的摆渡车，发车时间为8日上午6:45. 
+ 
+ 
+四、 开幕式将由中央电视台进行现场直播。新闻中心将免费提供开幕式直播公 
+共信号。请参加开幕式的媒体勿将直播设备带入会场。 
+ 
+ 
+　　(中国共产党新闻网) 
+\end{frame} 
+ 
+ 
+\subsection{图片测试} 
+ 
+ 
+ 
+\section{其他测试} 
+ 
+ 
+\begin{frame} 
+\frametitle{my first beamer!} 
+\begin{definition} 
+a \alert{beamer} is to create a slides show! 
+\end{definition} 
+\end{frame} 
+ 
+ 
+\section{总结一下} 
+ 
+ 
+\begin{frame} 
+    \frametitle{为什么使用Beamer？} 
+    \begin{enumerate} 
+      \item \XeLaTeX 非常棒！ 
+      \begin{enumerate} 
+        \item 可以使用系统字体； 
+        \item 可以中英文混排； 
+        \item 这些优点已经足够了！ 
+      \end{enumerate} 
+      \item Beamer非常棒！ 
+      \item \LaTeX 非常棒！ 
+    \end{enumerate} 
+\end{frame} 
+ 
+ 
+ 
+ 
+\end{document}
+
