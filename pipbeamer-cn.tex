@@ -1,0 +1,311 @@
+%!Tex program=xelatex
+\documentclass[presentation,11pt]{beamer}
+\usepackage{ctex}
+%\usepackage{xeCJK}
+\usepackage{graphics}
+
+
+
+\usepackage{xcolor}
+%\usepackage{fontspec}
+%\usepackage{xunicode}
+\usepackage{xltxtra}
+%% 下面的包控制beamer的风格，可以根据自己的爱好修改
+% \usepackage{beamerthemesplit}   % 使用split风格
+% \usepackage{beamerthemeshadow}  % 使用shadow风格
+% \usepackage[width=2cm,dark,tab]{beamerthemesidebar}
+
+
+
+\usepackage{hyperref}       %为PDF文档创建超链接
+
+\usefonttheme[onlymath]{serif}
+\usepackage{amsmath}                   %数学符号与公式
+\usepackage{amsfonts}                  %数学符号与字体
+
+
+% 设置一些格式
+%==================================================
+\beamertemplateballitem
+%\setbeamertemplate{theorems}[numbered]      %定理编号
+%\setbeamertemplate{caption}[numbered]       %图和表格的标题显示编号
+%\setbeamertemplate{navigation symbols}{}    %取消导航条
+%==================================================
+
+
+
+
+% 将默认的英文目录等改为中文，设置图号和公式号与章节对应，缩进大小
+%==================================================
+% \renewcommand{\contentsname}{\LARGE{\bf{目 \quad 录}}}
+% \renewcommand{\abstractname}{\Large{\bf{摘 \quad 要}}}
+% \renewcommand{\appendixname}{\Large{\bf{附 \quad 录}}}
+% \renewcommand{\theequation}{\arabic{section}.\arabic{equation}}      %公式号与章节对应
+% \renewcommand{\figurename}{\normalsize{图 \arabic{section}.\arabic{figure}}}   %改figure为图
+% \makeatletter
+% \renewcommand{\fnum@figure}[1]{\textbf{\figurename~}\hspace{10pt} \sffamily}   %图号与章节对应
+% \makeatother
+\setlength{\parindent}{2em}       %设置缩进为两个大写M的宽度，大约为两个汉字的宽度
+%==================================================
+
+
+% 设置英文字体
+%==================================================
+
+
+%\usefonttheme{professionalfonts}
+
+
+%\defaultfontfeatures{Scale=MatchLowercase} % 这个参数保证 serif、sans-serif 和 monospace 字体在小写时大小匹配
+\setmainfont[Mapping=tex-text]{Times New Roman} % 使用 XeTeX 的 text-mapping 方案，正确显示 LaTeX 样式的双引号（`` ''）
+% \setmainfont[Mapping=tex-text]{Palatino Linotype}
+%\setsansfont[Mapping=tex-text]{Arial}
+%\setsansfont{微软雅黑}
+ %\setsansfont[Mapping=tex-text]{DejaVu Sans YuanTi}
+%\setmonofont{Courier New}
+ %\setmonofont{Monaco}
+% \setmonofont{DejaVu Sans YuanTi}
+%==================================================
+
+
+%\mode<presentation>
+%{
+%  \usetheme{Warsaw}
+%  % 可以改成别的主题
+%  \setbeamercovered{transparent}
+%  % 也可删去
+%}
+\setbeamertemplate{caption}[numbered]   %beamer默认的图片的caption不带编号
+
+
+%使用metapost动画
+%\usepackage{xmpmulti}
+%\DeclareGraphicsRule{*}{mps}{*}{}
+
+%\setmainfont{AdobeKaitiStd}
+%\setmainfont{AdobeKaitiStd}
+%\setsansfont{SimHei}
+
+%\setsansfontWenQuanYi Zen Hei}     %Linux下一般没有SimHei，使用文泉驿正黑或其他系统中可用的字体代替
+
+\usecolortheme[named=green]{structure}	
+%\usetheme{Warsaw}
+%\usetheme{AnnArbor}
+%\usetheme{PaloAlto}
+%\usetheme{Antibes}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Marburg}
+%\usetheme{PaloAlto}
+%\usetheme{Singapore}
+%\usetheme{Warsaw}
+
+
+\title{beamer测试}
+\subtitle{Beamer中英文混排测试}
+\author{pipjing}
+\institute{\kaishu 西南大学\  数院}
+\date{\today}
+
+
+% 如果你想要在每一小节之前都显示一下目录, 则可把一下小段的注解号 "%" 删去
+%\AtBeginS section[]
+%{
+%  
+%\begin{frame}<beamer> 
+%    \frametitle{概要} 
+%    \tableofcontents[currentsection,currents section] 
+%  \end{frame}
+
+%}
+
+
+% 除掉以下命令的注解 "%" 后, 许多环境都会自动逐段显示
+%\beamerdefaultoverlayspecification{<+->}
+
+
+%索引使用中文
+%\renewcommand\contentsname{目\ 录}
+%\renewcommand\listfigurename{插图目录}
+%\renewcommand\listtablename{表格目录}
+%%\renewcommand\abstractname{摘\ 要} %err undefined
+%%\renewcommand\refname{参考文献}         %article类型
+%\renewcommand\bibname{参\ 考\ 文\ 献}    %book类型
+%\renewcommand\indexname{索\ 引}
+%\renewcommand\figurename{图}
+%\renewcommand\tablename{表}
+%\renewcommand\partname{部分}
+
+
+
+
+%定制定理环境
+%\newtheorem{mythl}{引理}[section]
+%\newtheorem{mytht}{定理}[section]
+%\newtheorem{mythr}{注}[section]
+%\newtheorem{mythc}{推论}[section]
+%\newtheorem{mythd}{定义}[section]
+%\newtheorem{mytha}{公理}
+%\newtheorem{mythp}{命题}
+%\newtheorem{mythe}{练习}
+%\newtheorem{myli}{例}[section]
+
+
+
+
+\begin{document} 
+ 
+ 
+\XeTeXlinebreaklocale "zh"  % 表示用中文的断行 
+\XeTeXlinebreakskip = 0pt plus 1pt % 多一点调整的空间 
+ 
+ 
+\begin{frame} 
+\titlepage 
+ 
+ 
+\end{frame} 
+ 
+ 
+\begin{frame} 
+\frametitle{目录} 
+    \tableofcontents     % 你也可以插入选项 [pausesections] 
+ 
+ 
+\end{frame} 
+ 
+ 
+ 
+ 
+\section{常用功能测试} 
+\subsection{简单格式测试} 
+ 
+ 
+\begin{frame} 
+   \frametitle{常用中文字体测试} 
+ 
+ 
+ 
+ 
+\kaishu 中文显示正确！\\  
+\songti 中文显示正确！\\  
+\heiti 中文显示正确！\\  
+\fangsong 中文显示正确！\\ 
+
+
+% English test succeed!\\ 
+% \begin{align}\label{eq:ei} 
+%     E=mc^2\\ 
+%     E=\hbar \nu 
+% \end{align} 
+ 
+ 
+\end{frame} 
+ 
+\begin{frame}[allowframebreaks] 
+\frametitle{大段中文测试} 
+教育学是一门独立的学科。教育学是研究人类教育现象和解决教育问题、揭示一般教育规律的一门社会科学。教育是广泛存在于人类生活中的社会现象，教育学是有目的地培养社会人的活动。它是通过对各种教育现象和问题的研究揭示教育的一般规律。
+19世纪中叶以后，马克思主义的产生，近代心理学、生理学的发展，为科学化教育奠定了辩证唯物主义哲学和自然科学基础。现代生产和科学技术的发展，教育实践的广泛性、丰富性，更进一步推动了教育学的发展。教育学的研究对象是人类教育现象和问题，以及教育的一般规律。是教育、社会、人之间和教育内部各因素之间内在的本质的联系和关系，具有客观性、必然性、稳定性、重复性。如教育与社会的政治、生产、经济、文化、人口之间的关系，教育活动与人的发展之间的关系，教育内部的学校教育、社会教育、家庭教育之间的关系，小学教育、中学教育、大学教育之间的关系，中学教育中教育目标与教学、课外教育之间的关系，教育、教学活动中智育与德、体、美、劳诸育之间的关系，智育中教育者的施教与受教育者的受教之间的关系，学生学习活动中学习动机、学习态度、学习方法与学习成绩之间的关系等等都存在着规律性联系。教育学的任务就是要探讨、揭示种种教育的规律，阐明各种教育问题，建立教育学理论体系。
+\end{frame} 
+
+\begin{frame}
+  \frametitle{大段英文测试}
+  What is GitHub Pages?
+GitHub Pages is a static site hosting service.
+
+GitHub Pages is designed to host your personal, organization, or project pages directly from a GitHub repository. To learn more about the different types of GitHub Pages sites, see "User, organization, and project pages."
+
+You can create and publish GitHub Pages online using the Automatic Page Generator. If you prefer to work locally, you can use GitHub Desktop or the command line.
+
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{数学公式测试}
+   \begin{eqnarray*}
+                \vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n}\\
+                {n+1 \choose k}={n \choose k}+{n \choose k-1}\\
+                \sum_{k_0,k_1,\ldots>0 \atop k_0+k_1+\cdots=n}A_{k_0}A_{k_1}\cdots
+           \end{eqnarray*}
+
+\end{frame}
+ 
+ 
+\subsection{图片测试} 
+ 
+ 
+ 
+\section{其他测试} 
+ 
+ 
+\begin{frame} 
+\frametitle{my first beamer!} 
+\begin{definition} 
+a \alert{beamer} is to create a slides show! 
+\end{definition} 
+\end{frame} 
+ 
+
+ \subsection{换页动态效果}
+
+ \begin{frame}[<+->]
+   \frametitle{\subsecname}
+  在全屏下才会出现效果。
+  \begin{enumerate}
+  \item 水平出现效果
+    \transblindshorizontal<1>
+  \item 竖直出现效果
+    \transblindsvertical<2>
+  \item 从中心到四角
+    \transboxin<3>
+  \item 从四角到中心
+    \transboxout<4>
+  \item 溶解效果
+    \transdissolve<5>
+  \item Glitter
+    \transglitter<6>
+  \item 竖直撕开(向内)
+    \transsplitverticalin<7>
+  \item 竖直撕开(向外)
+    \transsplitverticalout<8>
+  \item 涂抹
+    \transwipe<9>
+  \item 渐出
+    \transduration<10>{1}
+  \end{enumerate}
+
+ \end{frame}
+  
+ 
+\section{总结一下} 
+ 
+ 
+\begin{frame} 
+    \frametitle{为什么使用Beamer？} 
+    \begin{enumerate} 
+      \item \XeLaTeX 非常棒！ 
+      \begin{enumerate} 
+        \item 可以使用系统字体； 
+        \item 可以中英文混排； 
+        \item 这些优点已经足够了！ 
+      \end{enumerate} 
+      \item Beamer非常棒！ 
+      \item \LaTeX 非常棒！ 
+    \end{enumerate} 
+\end{frame} 
+ 
+
+
+ 
+ 
+\end{document}
+
